@@ -1,0 +1,24 @@
+{
+  "originHash" : "f029812952bca622834c29a322770a862236ae8a2731c4148f495b6157c86b80",
+  "pins" : [
+    {
+      "identity" : "camera",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Mijick/Camera/",
+      "state" : {
+        "revision" : "8cde8804fa9a77c819e2db9ef9d44736ff1e3f63",
+        "version" : "3.0.0"
+      }
+    },
+    {
+      "identity" : "timer",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Mijick/Timer",
+      "state" : {
+        "revision" : "342371c33c3f084d82a4818447ba77d858064c85",
+        "version" : "2.0.0"
+      }
+    }
+  ],
+  "version" : 3
+}

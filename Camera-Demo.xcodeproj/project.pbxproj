@@ -11,6 +11,7 @@
 		6D18555B2BE9186900521BE4 /* CustomCameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D18555A2BE9186900521BE4 /* CustomCameraPreview.swift */; };
 		6D18555D2BE91AF400521BE4 /* CustomCameraErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D18555C2BE91AF400521BE4 /* CustomCameraErrorView.swift */; };
 		6D3733932BBDB57B0087F656 /* MijickCameraView in Frameworks */ = {isa = PBXBuildFile; productRef = 6D3733922BBDB57B0087F656 /* MijickCameraView */; };
+		6DBBF9842D0E56F7008F7839 /* MijickCamera in Frameworks */ = {isa = PBXBuildFile; productRef = 6DBBF9832D0E56F7008F7839 /* MijickCamera */; };
 		6DF2032A2BBB715E00F9372B /* CameraView_DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF203292BBB715E00F9372B /* CameraView_DemoApp.swift */; };
 		6DF2032C2BBB715E00F9372B /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF2032B2BBB715E00F9372B /* CameraView.swift */; };
 		6DF2032E2BBB715F00F9372B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DF2032D2BBB715F00F9372B /* Assets.xcassets */; };
@@ -20,12 +21,11 @@
 		6D1855582BE913DC00521BE4 /* CustomCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraView.swift; sourceTree = "<group>"; };
 		6D18555A2BE9186900521BE4 /* CustomCameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraPreview.swift; sourceTree = "<group>"; };
 		6D18555C2BE91AF400521BE4 /* CustomCameraErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraErrorView.swift; sourceTree = "<group>"; };
-		6DF203262BBB715D00F9372B /* CameraView-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CameraView-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DF203262BBB715D00F9372B /* Camera-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Camera-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DF203292BBB715E00F9372B /* CameraView_DemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView_DemoApp.swift; sourceTree = "<group>"; };
 		6DF2032B2BBB715E00F9372B /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		6DF2032D2BBB715F00F9372B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6DF2032F2BBB715F00F9372B /* CameraView_Demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CameraView_Demo.entitlements; sourceTree = "<group>"; };
-		6DF2033C2BBB725900F9372B /* CameraView */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CameraView; path = ../CameraView; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DBBF9842D0E56F7008F7839 /* MijickCamera in Frameworks */,
 				6D3733932BBDB57B0087F656 /* MijickCameraView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -69,8 +70,7 @@
 		6DF2031D2BBB715D00F9372B = {
 			isa = PBXGroup;
 			children = (
-				6DF203282BBB715E00F9372B /* CameraView-Demo */,
-				6DF2033C2BBB725900F9372B /* CameraView */,
+				6DF203282BBB715E00F9372B /* Camera-Demo */,
 				6DF203272BBB715E00F9372B /* Products */,
 				6D3733912BBDB57B0087F656 /* Frameworks */,
 			);
@@ -79,12 +79,12 @@
 		6DF203272BBB715E00F9372B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6DF203262BBB715D00F9372B /* CameraView-Demo.app */,
+				6DF203262BBB715D00F9372B /* Camera-Demo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6DF203282BBB715E00F9372B /* CameraView-Demo */ = {
+		6DF203282BBB715E00F9372B /* Camera-Demo */ = {
 			isa = PBXGroup;
 			children = (
 				6DF203292BBB715E00F9372B /* CameraView_DemoApp.swift */,
@@ -92,15 +92,15 @@
 				6D18555E2BE91D6400521BE4 /* Custom UI Examples */,
 				6D1855572BE9138600521BE4 /* Assets */,
 			);
-			path = "CameraView-Demo";
+			path = "Camera-Demo";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6DF203252BBB715D00F9372B /* CameraView-Demo */ = {
+		6DF203252BBB715D00F9372B /* Camera-Demo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6DF203352BBB715F00F9372B /* Build configuration list for PBXNativeTarget "CameraView-Demo" */;
+			buildConfigurationList = 6DF203352BBB715F00F9372B /* Build configuration list for PBXNativeTarget "Camera-Demo" */;
 			buildPhases = (
 				6DF203222BBB715D00F9372B /* Sources */,
 				6DF203232BBB715D00F9372B /* Frameworks */,
@@ -110,12 +110,13 @@
 			);
 			dependencies = (
 			);
-			name = "CameraView-Demo";
+			name = "Camera-Demo";
 			packageProductDependencies = (
 				6D3733922BBDB57B0087F656 /* MijickCameraView */,
+				6DBBF9832D0E56F7008F7839 /* MijickCamera */,
 			);
 			productName = "CameraView-Demo";
-			productReference = 6DF203262BBB715D00F9372B /* CameraView-Demo.app */;
+			productReference = 6DF203262BBB715D00F9372B /* Camera-Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -133,7 +134,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6DF203212BBB715D00F9372B /* Build configuration list for PBXProject "CameraView-Demo" */;
+			buildConfigurationList = 6DF203212BBB715D00F9372B /* Build configuration list for PBXProject "Camera-Demo" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -143,13 +144,13 @@
 			);
 			mainGroup = 6DF2031D2BBB715D00F9372B;
 			packageReferences = (
-				6DF203382BBB721800F9372B /* XCRemoteSwiftPackageReference "CameraView" */,
+				6DBBF9822D0E56F7008F7839 /* XCRemoteSwiftPackageReference "Camera" */,
 			);
 			productRefGroup = 6DF203272BBB715E00F9372B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6DF203252BBB715D00F9372B /* CameraView-Demo */,
+				6DF203252BBB715D00F9372B /* Camera-Demo */,
 			);
 		};
 /* End PBXProject section */
@@ -380,7 +381,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6DF203212BBB715D00F9372B /* Build configuration list for PBXProject "CameraView-Demo" */ = {
+		6DF203212BBB715D00F9372B /* Build configuration list for PBXProject "Camera-Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6DF203332BBB715F00F9372B /* Debug */,
@@ -389,7 +390,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6DF203352BBB715F00F9372B /* Build configuration list for PBXNativeTarget "CameraView-Demo" */ = {
+		6DF203352BBB715F00F9372B /* Build configuration list for PBXNativeTarget "Camera-Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6DF203362BBB715F00F9372B /* Debug */,
@@ -401,12 +402,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		6DF203382BBB721800F9372B /* XCRemoteSwiftPackageReference "CameraView" */ = {
+		6DBBF9822D0E56F7008F7839 /* XCRemoteSwiftPackageReference "Camera" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Mijick/CameraView";
+			repositoryURL = "https://github.com/Mijick/Camera/";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -415,6 +416,11 @@
 		6D3733922BBDB57B0087F656 /* MijickCameraView */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = MijickCameraView;
+		};
+		6DBBF9832D0E56F7008F7839 /* MijickCamera */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6DBBF9822D0E56F7008F7839 /* XCRemoteSwiftPackageReference "Camera" */;
+			productName = MijickCamera;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
