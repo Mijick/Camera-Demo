@@ -10,11 +10,11 @@
 
 
 import SwiftUI
-import MijickCameraView
+import MijickCamera
 
-struct CustomCameraErrorView: MCameraErrorView {
-    let error: CameraManager.Error
-    let closeControllerAction: () -> ()
+struct CustomCameraErrorView: MCameraErrorScreen {
+    let error: MCameraError
+    let closeMCameraAction: () -> ()
 
 
     var body: some View {

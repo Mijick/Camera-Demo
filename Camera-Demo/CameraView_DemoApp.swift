@@ -10,7 +10,7 @@
 
 
 import SwiftUI
-import MijickCameraView
+import MijickCamera
 
 @main struct CameraView_DemoApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate

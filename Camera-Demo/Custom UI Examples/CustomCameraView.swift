@@ -10,18 +10,18 @@
 
 
 import SwiftUI
-import MijickCameraView
+import MijickCamera
 
-struct CustomCameraView: MCameraView {
-    @ObservedObject var cameraManager: MijickCameraView.CameraManager
+struct CustomCameraView: MCameraScreen {
+    @ObservedObject var cameraManager: CameraManager
     let namespace: Namespace.ID
-    let closeControllerAction: () -> ()
+    let closeMCameraAction: () -> ()
 
 
     var body: some View {
         VStack(spacing: 0) {
             createNavigationBar()
-            createCameraView()
+            createCameraOutputView()
             createCaptureButton()
         }
     }

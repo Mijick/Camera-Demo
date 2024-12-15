@@ -10,10 +10,10 @@
 
 
 import SwiftUI
-import MijickCameraView
+import MijickCamera
 
-struct CustomCameraPreview: MCameraPreview {
-    let capturedMedia: MijickCameraView.MCameraMedia
+struct CustomCameraPreview: MCapturedMediaScreen {
+    let capturedMedia: MCameraMedia
     let namespace: Namespace.ID
     let retakeAction: () -> ()
     let acceptMediaAction: () -> ()
@@ -30,7 +30,7 @@ struct CustomCameraPreview: MCameraPreview {
 }
 private extension CustomCameraPreview {
     func createContentView() -> some View { ZStack {
-        if let image = capturedMedia.image { createImageView(image) }
+        if let image = capturedMedia.getImage() { createImageView(image) }
         else { EmptyView() }
     }}
     func createButtons() -> some View {
