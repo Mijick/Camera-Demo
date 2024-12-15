@@ -10,7 +10,7 @@
 		6D1855592BE913DC00521BE4 /* CustomCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1855582BE913DC00521BE4 /* CustomCameraView.swift */; };
 		6D18555B2BE9186900521BE4 /* CustomCameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D18555A2BE9186900521BE4 /* CustomCameraPreview.swift */; };
 		6D18555D2BE91AF400521BE4 /* CustomCameraErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D18555C2BE91AF400521BE4 /* CustomCameraErrorView.swift */; };
-		6DBBF9842D0E56F7008F7839 /* MijickCamera in Frameworks */ = {isa = PBXBuildFile; productRef = 6DBBF9832D0E56F7008F7839 /* MijickCamera */; };
+		6D216ABD2D0E5D7D0047BCE3 /* MijickCamera in Frameworks */ = {isa = PBXBuildFile; productRef = 6D216ABC2D0E5D7D0047BCE3 /* MijickCamera */; };
 		6DF2032A2BBB715E00F9372B /* CameraView_DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF203292BBB715E00F9372B /* CameraView_DemoApp.swift */; };
 		6DF2032C2BBB715E00F9372B /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF2032B2BBB715E00F9372B /* CameraView.swift */; };
 		6DF2032E2BBB715F00F9372B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DF2032D2BBB715F00F9372B /* Assets.xcassets */; };
@@ -20,7 +20,7 @@
 		6D1855582BE913DC00521BE4 /* CustomCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraView.swift; sourceTree = "<group>"; };
 		6D18555A2BE9186900521BE4 /* CustomCameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraPreview.swift; sourceTree = "<group>"; };
 		6D18555C2BE91AF400521BE4 /* CustomCameraErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCameraErrorView.swift; sourceTree = "<group>"; };
-		6DF203262BBB715D00F9372B /* Camera-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Camera-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DF203262BBB715D00F9372B /* Camera Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Camera Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DF203292BBB715E00F9372B /* CameraView_DemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView_DemoApp.swift; sourceTree = "<group>"; };
 		6DF2032B2BBB715E00F9372B /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		6DF2032D2BBB715F00F9372B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -32,7 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DBBF9842D0E56F7008F7839 /* MijickCamera in Frameworks */,
+				6D216ABD2D0E5D7D0047BCE3 /* MijickCamera in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,7 +68,7 @@
 		6DF2031D2BBB715D00F9372B = {
 			isa = PBXGroup;
 			children = (
-				6DF203282BBB715E00F9372B /* Camera-Demo */,
+				6DF203282BBB715E00F9372B /* Camera Demo */,
 				6DF203272BBB715E00F9372B /* Products */,
 				6D3733912BBDB57B0087F656 /* Frameworks */,
 			);
@@ -77,12 +77,12 @@
 		6DF203272BBB715E00F9372B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6DF203262BBB715D00F9372B /* Camera-Demo.app */,
+				6DF203262BBB715D00F9372B /* Camera Demo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6DF203282BBB715E00F9372B /* Camera-Demo */ = {
+		6DF203282BBB715E00F9372B /* Camera Demo */ = {
 			isa = PBXGroup;
 			children = (
 				6DF203292BBB715E00F9372B /* CameraView_DemoApp.swift */,
@@ -90,15 +90,15 @@
 				6D18555E2BE91D6400521BE4 /* Custom UI Examples */,
 				6D1855572BE9138600521BE4 /* Assets */,
 			);
-			path = "Camera-Demo";
+			path = "Camera Demo";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6DF203252BBB715D00F9372B /* Camera-Demo */ = {
+		6DF203252BBB715D00F9372B /* Camera Demo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6DF203352BBB715F00F9372B /* Build configuration list for PBXNativeTarget "Camera-Demo" */;
+			buildConfigurationList = 6DF203352BBB715F00F9372B /* Build configuration list for PBXNativeTarget "Camera Demo" */;
 			buildPhases = (
 				6DF203222BBB715D00F9372B /* Sources */,
 				6DF203232BBB715D00F9372B /* Frameworks */,
@@ -108,12 +108,12 @@
 			);
 			dependencies = (
 			);
-			name = "Camera-Demo";
+			name = "Camera Demo";
 			packageProductDependencies = (
-				6DBBF9832D0E56F7008F7839 /* MijickCamera */,
+				6D216ABC2D0E5D7D0047BCE3 /* MijickCamera */,
 			);
 			productName = "CameraView-Demo";
-			productReference = 6DF203262BBB715D00F9372B /* Camera-Demo.app */;
+			productReference = 6DF203262BBB715D00F9372B /* Camera Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -131,7 +131,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6DF203212BBB715D00F9372B /* Build configuration list for PBXProject "Camera-Demo" */;
+			buildConfigurationList = 6DF203212BBB715D00F9372B /* Build configuration list for PBXProject "Camera Demo" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -141,13 +141,13 @@
 			);
 			mainGroup = 6DF2031D2BBB715D00F9372B;
 			packageReferences = (
-				6DBBF9822D0E56F7008F7839 /* XCRemoteSwiftPackageReference "Camera" */,
+				6D216ABB2D0E5D7D0047BCE3 /* XCRemoteSwiftPackageReference "Camera" */,
 			);
 			productRefGroup = 6DF203272BBB715E00F9372B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6DF203252BBB715D00F9372B /* Camera-Demo */,
+				6DF203252BBB715D00F9372B /* Camera Demo */,
 			);
 		};
 /* End PBXProject section */
@@ -298,7 +298,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
-				CODE_SIGN_ENTITLEMENTS = "Camera-Demo/Assets/Camera_Demo.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Camera Demo/Assets/Camera_Demo.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
@@ -339,7 +339,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
-				CODE_SIGN_ENTITLEMENTS = "Camera-Demo/Assets/Camera_Demo.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Camera Demo/Assets/Camera_Demo.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
@@ -378,7 +378,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6DF203212BBB715D00F9372B /* Build configuration list for PBXProject "Camera-Demo" */ = {
+		6DF203212BBB715D00F9372B /* Build configuration list for PBXProject "Camera Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6DF203332BBB715F00F9372B /* Debug */,
@@ -387,7 +387,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6DF203352BBB715F00F9372B /* Build configuration list for PBXNativeTarget "Camera-Demo" */ = {
+		6DF203352BBB715F00F9372B /* Build configuration list for PBXNativeTarget "Camera Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6DF203362BBB715F00F9372B /* Debug */,
@@ -399,7 +399,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		6DBBF9822D0E56F7008F7839 /* XCRemoteSwiftPackageReference "Camera" */ = {
+		6D216ABB2D0E5D7D0047BCE3 /* XCRemoteSwiftPackageReference "Camera" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Mijick/Camera/";
 			requirement = {
@@ -410,9 +410,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		6DBBF9832D0E56F7008F7839 /* MijickCamera */ = {
+		6D216ABC2D0E5D7D0047BCE3 /* MijickCamera */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 6DBBF9822D0E56F7008F7839 /* XCRemoteSwiftPackageReference "Camera" */;
+			package = 6D216ABB2D0E5D7D0047BCE3 /* XCRemoteSwiftPackageReference "Camera" */;
 			productName = MijickCamera;
 		};
 /* End XCSwiftPackageProductDependency section */
