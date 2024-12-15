@@ -33,6 +33,7 @@ private extension CameraView {
             .onImageCaptured(onImageCaptured)
             .onVideoCaptured(onVideoCaptured)
             .setCloseMCameraAction(onCloseController)
+            .startSession()
     }
 }
 
