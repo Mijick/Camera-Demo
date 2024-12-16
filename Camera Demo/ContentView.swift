@@ -51,7 +51,10 @@ private extension ContentView {
         }
     }
     func createUploadedMediaView() -> some View {
-        EmptyView()
+        VStack(alignment: .leading, spacing: 20) {
+            createUploadedMediaHeader()
+            createUploadedMediaItems()
+        }
     }
 }
 private extension ContentView {
@@ -64,6 +67,14 @@ private extension ContentView {
         ActionButton(icon: .scVideo, title: "Capture Video") {
 
         }
+    }
+    func createUploadedMediaHeader() -> some View {
+        Text("Uploaded Media")
+            .font(.h6)
+            .foregroundStyle(.textPrimary)
+    }
+    func createUploadedMediaItems() -> some View {
+        EmptyView()
     }
 }
 private extension ContentView {
