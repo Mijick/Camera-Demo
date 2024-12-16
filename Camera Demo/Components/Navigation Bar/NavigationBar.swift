@@ -25,22 +25,22 @@ struct NavigationBar: View {
 }
 private extension NavigationBar {
     func createLogoButton() -> some View {
-        NavigationBarLogoButton {
+        LogoButton {
             openURL("https://link.mijick.com/website")
         }
     }
     func createMediumButton() -> some View {
-        NavigationBarButton(icon: .scMedium) {
+        SocialMediaButton(icon: .scMedium) {
             openURL("https://link.mijick.com/medium")
         }
     }
     func createDiscordButton() -> some View {
-        NavigationBarButton(icon: .scDiscord) {
+        SocialMediaButton(icon: .scDiscord) {
             openURL("https://link.mijick.com/discord")
         }
     }
     func createGithubButton() -> some View {
-        NavigationBarButton(icon: .scGithub) {
+        SocialMediaButton(icon: .scGithub) {
             openURL("https://link.mijick.com/github")
         }
     }

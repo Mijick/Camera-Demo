@@ -13,10 +13,39 @@ import SwiftUI
 import MijickCamera
 
 struct ContentView: View {
-    
+    @State private var uploadedMedia: [Any] = []
 
 
     var body: some View {
+        VStack(spacing: 0) {
+            createNavigationBar()
+            Spacer()
+        }
+        .padding(.horizontal, 16)
+        .background(Color(.backgroundPrimary).ignoresSafeArea())
+        .preferredColorScheme(.dark)
+    }
+}
+private extension ContentView {
+    func createNavigationBar() -> some View {
+        NavigationBar()
+    }
+    func createControlButtons() -> some View {
         EmptyView()
     }
+    func createUploadedMediaView() -> some View {
+        EmptyView()
+    }
+}
+private extension ContentView {
+
+}
+private extension ContentView {
+
+}
+private extension ContentView {
+
+}
+private extension ContentView {
+
 }

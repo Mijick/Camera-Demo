@@ -1,5 +1,5 @@
 //
-//  NavigationBar+LogoButton.swift of Camera Demo
+//  NavigationBar+SocialMediaButton.swift of Camera Demo
 //
 //  Created by Tomasz Kurylik. Sending ❤️ from Kraków!
 //    - Mail: tomasz.kurylik@mijick.com
@@ -11,14 +11,20 @@
 
 import SwiftUI
 
-extension NavigationBar { struct LogoButton: View {
+extension NavigationBar { struct SocialMediaButton: View {
+    let icon: ImageResource
     let action: () -> ()
+
 
     var body: some View {
         Button(action: action) {
-            Image(.mcLogo)
+            Image(icon)
                 .resizable()
+                .frame(width: 22, height: 22)
+                .foregroundColor(Color(.textPrimary))
                 .frame(width: 40, height: 40)
+                .background(Color(.backgroundSecondary))
+                .clipShape(RoundedRectangle(cornerRadius: 13, style: .continuous))
         }
     }
 }}
