@@ -88,7 +88,7 @@ private extension ContentView {
             title: "Item \(index + 1)",
             date: viewModel.uploadedMedia[index].date,
             duration: viewModel.uploadedMedia[index].duration,
-            onDeleteButtonTap: {}
+            onDeleteButtonTap: { viewModel.deleteMedia(at: index) }
         )
     }
 }
@@ -109,21 +109,31 @@ private extension ContentView {
 
 
 
-@Observable class ContentViewModel {
-    var uploadedMedia: [CapturedMedia] = []
+@MainActor @Observable class ContentViewModel {
+    private(set) var uploadedMedia: [CapturedMedia] = []
 }
 
 extension ContentViewModel {
-    @MainActor func presentCapturePicturePopup() { Task {
+    func presentCapturePicturePopup() { Task {
         await CapturePicturePopup(viewModel: self).present()
     }}
+
+
+     func addMedia(_ media: Any) async {
+        guard let capturedMedia = await CapturedMedia(media) else { return }
+        uploadedMedia.append(capturedMedia)
+    }
+    func deleteMedia(at index: Int) {
+        guard index < uploadedMedia.count else { return }
+        uploadedMedia.remove(at: index)
+    }
 }
 
 
 
 
 
-struct CapturedMedia {
+@MainActor struct CapturedMedia {
     let image: Image
     let date: Date
     let duration: Duration?

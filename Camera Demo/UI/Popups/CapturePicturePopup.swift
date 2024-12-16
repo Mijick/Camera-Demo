@@ -34,9 +34,7 @@ struct CapturePicturePopup: BottomPopup {
                     Task { await dismissLastPopup() }
                 }
                 .onImageCaptured { image, controller in Task {
-                    if let capturedMedia = await CapturedMedia(image) {
-                        viewModel.uploadedMedia.append(capturedMedia)
-                    }
+                    await viewModel.addMedia(image)
                     controller.closeMCamera()
                 }}
                 .startSession()

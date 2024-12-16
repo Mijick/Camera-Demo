@@ -103,6 +103,20 @@
 			path = Popups;
 			sourceTree = "<group>";
 		};
+		6DA195612D10F36A00EAE324 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		6DA195622D10F37300EAE324 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		6DE86D152D1097EE00FF1D5E /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +194,8 @@
 			isa = PBXGroup;
 			children = (
 				6DA195592D10F09500EAE324 /* UI */,
+				6DA195612D10F36A00EAE324 /* View Models */,
+				6DA195622D10F37300EAE324 /* Models */,
 				6DE86D132D10972000FF1D5E /* AppDelegate.swift */,
 				6DE86D292D10A98400FF1D5E /* Components */,
 				6DE86D1B2D109FBE00FF1D5E /* Extensions */,
