@@ -14,9 +14,10 @@
 		6DE86D1D2D109FC900FF1D5E /* Font+MFontModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE86D1C2D109FC900FF1D5E /* Font+MFontModifier.swift */; };
 		6DE86D1F2D10A07000FF1D5E /* View+MFontModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE86D1E2D10A07000FF1D5E /* View+MFontModifier.swift */; };
 		6DE86D212D10A0F800FF1D5E /* MFontModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE86D202D10A0F800FF1D5E /* MFontModifier.swift */; };
+		6DE86D232D10A26A00FF1D5E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DE86D222D10A26A00FF1D5E /* Colors.xcassets */; };
 		6DF2032A2BBB715E00F9372B /* Camera_DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF203292BBB715E00F9372B /* Camera_DemoApp.swift */; };
 		6DF2032C2BBB715E00F9372B /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF2032B2BBB715E00F9372B /* CameraView.swift */; };
-		6DF2032E2BBB715F00F9372B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DF2032D2BBB715F00F9372B /* Assets.xcassets */; };
+		6DF2032E2BBB715F00F9372B /* Icons & Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DF2032D2BBB715F00F9372B /* Icons & Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,10 +28,11 @@
 		6DE86D1C2D109FC900FF1D5E /* Font+MFontModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+MFontModifier.swift"; sourceTree = "<group>"; };
 		6DE86D1E2D10A07000FF1D5E /* View+MFontModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+MFontModifier.swift"; sourceTree = "<group>"; };
 		6DE86D202D10A0F800FF1D5E /* MFontModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFontModifier.swift; sourceTree = "<group>"; };
+		6DE86D222D10A26A00FF1D5E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		6DF203262BBB715D00F9372B /* Camera Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Camera Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DF203292BBB715E00F9372B /* Camera_DemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera_DemoApp.swift; sourceTree = "<group>"; };
 		6DF2032B2BBB715E00F9372B /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
-		6DF2032D2BBB715F00F9372B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6DF2032D2BBB715F00F9372B /* Icons & Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Icons & Images.xcassets"; sourceTree = "<group>"; };
 		6DF2032F2BBB715F00F9372B /* Camera-Demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Camera-Demo.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -51,7 +53,8 @@
 			children = (
 				6DE86D1A2D109C2A00FF1D5E /* Camera-Demo-Info.plist */,
 				6DF2032F2BBB715F00F9372B /* Camera-Demo.entitlements */,
-				6DF2032D2BBB715F00F9372B /* Assets.xcassets */,
+				6DF2032D2BBB715F00F9372B /* Icons & Images.xcassets */,
+				6DE86D222D10A26A00FF1D5E /* Colors.xcassets */,
 				6DE86D152D1097EE00FF1D5E /* Fonts */,
 			);
 			path = Assets;
@@ -177,7 +180,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DF2032E2BBB715F00F9372B /* Assets.xcassets in Resources */,
+				6DF2032E2BBB715F00F9372B /* Icons & Images.xcassets in Resources */,
+				6DE86D232D10A26A00FF1D5E /* Colors.xcassets in Resources */,
 				6DE86D192D109B7A00FF1D5E /* Inter-Regular.otf in Resources */,
 				6DE86D172D109B7300FF1D5E /* Inter-Bold.otf in Resources */,
 			);
