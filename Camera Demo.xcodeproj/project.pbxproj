@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6D216ABD2D0E5D7D0047BCE3 /* MijickCamera in Frameworks */ = {isa = PBXBuildFile; productRef = 6D216ABC2D0E5D7D0047BCE3 /* MijickCamera */; };
 		6DE86D142D10972000FF1D5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE86D132D10972000FF1D5E /* AppDelegate.swift */; };
+		6DE86D172D109B7300FF1D5E /* Inter-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6DE86D162D109B7300FF1D5E /* Inter-Bold.otf */; };
+		6DE86D192D109B7A00FF1D5E /* Inter-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6DE86D182D109B7A00FF1D5E /* Inter-Regular.otf */; };
 		6DF2032A2BBB715E00F9372B /* Camera_DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF203292BBB715E00F9372B /* Camera_DemoApp.swift */; };
 		6DF2032C2BBB715E00F9372B /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF2032B2BBB715E00F9372B /* CameraView.swift */; };
 		6DF2032E2BBB715F00F9372B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DF2032D2BBB715F00F9372B /* Assets.xcassets */; };
@@ -16,11 +18,14 @@
 
 /* Begin PBXFileReference section */
 		6DE86D132D10972000FF1D5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6DE86D162D109B7300FF1D5E /* Inter-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.otf"; sourceTree = "<group>"; };
+		6DE86D182D109B7A00FF1D5E /* Inter-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.otf"; sourceTree = "<group>"; };
+		6DE86D1A2D109C2A00FF1D5E /* Camera-Demo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Camera-Demo-Info.plist"; path = "Camera Demo/Assets/Camera-Demo-Info.plist"; sourceTree = SOURCE_ROOT; };
 		6DF203262BBB715D00F9372B /* Camera Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Camera Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DF203292BBB715E00F9372B /* Camera_DemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera_DemoApp.swift; sourceTree = "<group>"; };
 		6DF2032B2BBB715E00F9372B /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		6DF2032D2BBB715F00F9372B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6DF2032F2BBB715F00F9372B /* Camera_Demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Camera_Demo.entitlements; sourceTree = "<group>"; };
+		6DF2032F2BBB715F00F9372B /* Camera-Demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Camera-Demo.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +44,9 @@
 			isa = PBXGroup;
 			children = (
 				6DF2032D2BBB715F00F9372B /* Assets.xcassets */,
-				6DF2032F2BBB715F00F9372B /* Camera_Demo.entitlements */,
+				6DE86D1A2D109C2A00FF1D5E /* Camera-Demo-Info.plist */,
+				6DF2032F2BBB715F00F9372B /* Camera-Demo.entitlements */,
+				6DE86D152D1097EE00FF1D5E /* Fonts */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -49,6 +56,15 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6DE86D152D1097EE00FF1D5E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6DE86D162D109B7300FF1D5E /* Inter-Bold.otf */,
+				6DE86D182D109B7A00FF1D5E /* Inter-Regular.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		6DF2031D2BBB715D00F9372B = {
@@ -144,6 +160,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DF2032E2BBB715F00F9372B /* Assets.xcassets in Resources */,
+				6DE86D192D109B7A00FF1D5E /* Inter-Regular.otf in Resources */,
+				6DE86D172D109B7300FF1D5E /* Inter-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,7 +300,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
-				CODE_SIGN_ENTITLEMENTS = "Camera Demo/Assets/Camera_Demo.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Camera Demo/Assets/Camera-Demo.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
@@ -290,6 +308,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Camera Demo/Assets/Camera-Demo-Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Camera DEMO description <on error screen we take the description from info.plist file>";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone DEMO description <on error screen we take the description from info.plist file>";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = DEMO;
@@ -323,7 +342,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
-				CODE_SIGN_ENTITLEMENTS = "Camera Demo/Assets/Camera_Demo.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Camera Demo/Assets/Camera-Demo.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
@@ -331,6 +350,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Camera Demo/Assets/Camera-Demo-Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Camera DEMO description <on error screen we take the description from info.plist file>";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone DEMO description <on error screen we take the description from info.plist file>";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = DEMO;
