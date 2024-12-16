@@ -14,6 +14,7 @@ import SwiftUI
 extension NavigationBar { struct LogoButton: View {
     let action: () -> ()
 
+    
     var body: some View {
         Button(action: action) {
             Image(.mcLogo)
