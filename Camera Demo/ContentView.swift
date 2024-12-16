@@ -19,7 +19,7 @@ struct ContentView: View {
     var body: some View {
         VStack(spacing: 0) {
             createNavigationBar()
-            Spacer()
+            createScrollableView()
         }
         .padding(.horizontal, 16)
         .background(Color(.backgroundPrimary).ignoresSafeArea())
@@ -30,15 +30,41 @@ private extension ContentView {
     func createNavigationBar() -> some View {
         NavigationBar()
     }
+    func createScrollableView() -> some View {
+        ScrollView {
+            VStack(spacing: 64) {
+                createControlButtons()
+                createUploadedMediaView()
+            }
+            .padding(.top, 32)
+            .padding(.bottom, 44)
+        }
+        .scrollIndicators(.hidden)
+    }
+}
+private extension ContentView {
     func createControlButtons() -> some View {
-        EmptyView()
+        HStack(spacing: 12) {
+            createCapturePictureButton()
+            createCaptureVideoButton()
+            Spacer()
+        }
     }
     func createUploadedMediaView() -> some View {
         EmptyView()
     }
 }
 private extension ContentView {
+    func createCapturePictureButton() -> some View {
+        ActionButton(icon: .scPicture, title: "Capture Picture") {
+            
+        }
+    }
+    func createCaptureVideoButton() -> some View {
+        ActionButton(icon: .scVideo, title: "Capture Video") {
 
+        }
+    }
 }
 private extension ContentView {
 
