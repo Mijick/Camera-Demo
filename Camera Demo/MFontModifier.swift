@@ -55,9 +55,7 @@ extension MFontModifier {
 
 // MARK: Body
 extension MFontModifier {
-    static var large: MFontModifier { .init(.regular, size: 20, lineHeight: 32, kerning: -0.8) }
-    static var medium: MFontModifier { .init(.bold, size: 16, lineHeight: 24, kerning: -0.16) }
+    static var mediumBold: MFontModifier { .init(.bold, size: 16, lineHeight: 24, kerning: -0.16) }
     static var smallRegular: MFontModifier { .init(.regular, size: 12, lineHeight: 20, kerning: 0.16) }
-    static var smalBold: MFontModifier { .init(.bold, size: 12, lineHeight: 20, kerning: 0) }
-    static var tiny: MFontModifier { .init(.regular, size: 8, lineHeight: 12, kerning: 0.16) }
+    static var smallBold: MFontModifier { .init(.bold, size: 12, lineHeight: 20, kerning: 0) }
 }

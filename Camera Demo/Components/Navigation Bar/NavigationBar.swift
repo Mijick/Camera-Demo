@@ -52,3 +52,9 @@ private extension NavigationBar {
         UIApplication.shared.open(url)
     }
 }
+
+
+// MARK: Preview
+#Preview(traits: .sizeThatFitsLayout) {
+    NavigationBar()
+}

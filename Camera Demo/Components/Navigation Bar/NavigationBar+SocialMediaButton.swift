@@ -21,9 +21,9 @@ extension NavigationBar { struct SocialMediaButton: View {
             Image(icon)
                 .resizable()
                 .frame(width: 22, height: 22)
-                .foregroundColor(Color(.textPrimary))
+                .foregroundStyle(.textPrimary)
                 .frame(width: 40, height: 40)
-                .background(Color(.backgroundSecondary))
+                .background(.backgroundSecondary)
                 .clipShape(RoundedRectangle(cornerRadius: 13, style: .continuous))
         }
     }

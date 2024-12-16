@@ -20,6 +20,7 @@
 		6DE86D2C2D10A9C800FF1D5E /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE86D2B2D10A9C800FF1D5E /* NavigationBar.swift */; };
 		6DE86D2E2D10A9D800FF1D5E /* NavigationBar+LogoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE86D2D2D10A9D800FF1D5E /* NavigationBar+LogoButton.swift */; };
 		6DE86D302D10A9E400FF1D5E /* NavigationBar+SocialMediaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE86D2F2D10A9E400FF1D5E /* NavigationBar+SocialMediaButton.swift */; };
+		6DE86D332D10AB0E00FF1D5E /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE86D322D10AB0E00FF1D5E /* ActionButton.swift */; };
 		6DF2032A2BBB715E00F9372B /* Camera_DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF203292BBB715E00F9372B /* Camera_DemoApp.swift */; };
 		6DF2032E2BBB715F00F9372B /* Icons & Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DF2032D2BBB715F00F9372B /* Icons & Images.xcassets */; };
 /* End PBXBuildFile section */
@@ -37,6 +38,7 @@
 		6DE86D2B2D10A9C800FF1D5E /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		6DE86D2D2D10A9D800FF1D5E /* NavigationBar+LogoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationBar+LogoButton.swift"; sourceTree = "<group>"; };
 		6DE86D2F2D10A9E400FF1D5E /* NavigationBar+SocialMediaButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationBar+SocialMediaButton.swift"; sourceTree = "<group>"; };
+		6DE86D322D10AB0E00FF1D5E /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		6DF203262BBB715D00F9372B /* Camera Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Camera Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DF203292BBB715E00F9372B /* Camera_DemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera_DemoApp.swift; sourceTree = "<group>"; };
 		6DF2032D2BBB715F00F9372B /* Icons & Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Icons & Images.xcassets"; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				6DE86D2A2D10A9AD00FF1D5E /* Navigation Bar */,
+				6DE86D312D10AAF000FF1D5E /* Action Button */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -109,6 +112,14 @@
 				6DE86D2F2D10A9E400FF1D5E /* NavigationBar+SocialMediaButton.swift */,
 			);
 			path = "Navigation Bar";
+			sourceTree = "<group>";
+		};
+		6DE86D312D10AAF000FF1D5E /* Action Button */ = {
+			isa = PBXGroup;
+			children = (
+				6DE86D322D10AB0E00FF1D5E /* ActionButton.swift */,
+			);
+			path = "Action Button";
 			sourceTree = "<group>";
 		};
 		6DF2031D2BBB715D00F9372B = {
@@ -232,6 +243,7 @@
 				6DE86D212D10A0F800FF1D5E /* MFontModifier.swift in Sources */,
 				6DF2032A2BBB715E00F9372B /* Camera_DemoApp.swift in Sources */,
 				6DE86D1F2D10A07000FF1D5E /* View+MFontModifier.swift in Sources */,
+				6DE86D332D10AB0E00FF1D5E /* ActionButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
