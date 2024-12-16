@@ -15,7 +15,7 @@ struct UploadedMediaItem: View {
     let image: Image
     let title: String
     let date: Date
-    let duration: Duration
+    let duration: Duration?
     let onDeleteButtonTap: () -> ()
 
 
@@ -65,7 +65,7 @@ private extension UploadedMediaItem {
             .foregroundStyle(.textSecondary)
     }
     func createDurationText() -> some View {
-        Text(duration.formatted(.time(pattern: .minuteSecond)))
+        Text(duration?.formatted(.time(pattern: .minuteSecond)) ?? "Image")
             .font(.smallRegular)
             .foregroundStyle(.textSecondary)
     }

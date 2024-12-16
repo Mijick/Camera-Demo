@@ -76,15 +76,23 @@ private extension ContentView {
     }
     func createUploadedMediaItems() -> some View {
         VStack(spacing: 20) {
-
+            ForEach(0..<viewModel.uploadedMedia.count, id: \.self, content: createMediaItem)
         }
     }
 }
 private extension ContentView {
-
+    func createMediaItem(_ index: Int) -> some View {
+        UploadedMediaItem(
+            image: viewModel.uploadedMedia[index].image,
+            title: "Item \(index + 1)",
+            date: viewModel.uploadedMedia[index].date,
+            duration: viewModel.uploadedMedia[index].duration,
+            onDeleteButtonTap: {}
+        )
+    }
 }
 private extension ContentView {
-
+    
 }
 private extension ContentView {
 
@@ -116,10 +124,12 @@ struct CapturePicturePopup: BottomPopup {
             .setCloseMCameraAction {
                 Task { await dismissLastPopup() }
             }
-            .onImageCaptured {
-                viewModel.uploadedMedia.append($0)
-                $1.closeMCamera()
-            }
+            .onImageCaptured { image, controller in Task {
+                if let capturedMedia = await CapturedMedia(image) {
+                    viewModel.uploadedMedia.append(capturedMedia)
+                }
+                controller.closeMCamera()
+            }}
             .startSession()
     }
 }
@@ -138,11 +148,70 @@ private extension CapturePicturePopup {
 
 
 @Observable class ContentViewModel {
-    var uploadedMedia: [Any] = []
+    var uploadedMedia: [CapturedMedia] = []
 }
 
 extension ContentViewModel {
     @MainActor func presentCapturePicturePopup() { Task {
         await CapturePicturePopup(viewModel: self).present()
     }}
+}
+
+
+
+
+
+struct CapturedMedia {
+    let image: Image
+    let date: Date
+    let duration: Duration?
+
+
+    init?(_ data: Any) async {
+        if let image = data as? UIImage { self.init(image: image) }
+        else if let videoURL = data as? URL { await self.init(videoURL: videoURL) }
+        else { return nil }
+    }
+}
+private extension CapturedMedia {
+    init(image: UIImage) {
+        self.image = .init(uiImage: image)
+        self.date = .init()
+        self.duration = nil
+    }
+    init?(videoURL: URL) async {
+        guard let (videoDuration, videoThumbnail) = try? await AVURLAsset(url: videoURL).getVideoDetails() else { return nil }
+
+        self.image = .init(uiImage: videoThumbnail)
+        self.date = .init()
+        self.duration = videoDuration
+    }
+}
+
+
+import AVKit
+
+extension AVURLAsset {
+    func getVideoDetails() async throws -> (duration: Duration, thumbnail: UIImage)? {
+        let duration = try await getVideoDuration()
+        let videoThumbnail = try await getVideoThumbnail()
+
+        return (duration, videoThumbnail)
+    }
+}
+private extension AVURLAsset {
+    func getVideoDuration() async throws -> Duration {
+        let duration = try await load(.duration)
+        return .init(secondsComponent: Int64(duration.seconds), attosecondsComponent: 0)
+    }
+    func getVideoThumbnail() async throws -> UIImage {
+        let assetImageGenerator = AVAssetImageGenerator(asset: self)
+        assetImageGenerator.appliesPreferredTrackTransform = true
+        assetImageGenerator.apertureMode = AVAssetImageGenerator.ApertureMode.encodedPixels
+
+        let cmTime = CMTime(seconds: 0, preferredTimescale: 60)
+        let cgImage = try await assetImageGenerator.image(at: cmTime).image
+        let thumbnailImage = UIImage(cgImage: cgImage)
+        return thumbnailImage
+    }
 }
