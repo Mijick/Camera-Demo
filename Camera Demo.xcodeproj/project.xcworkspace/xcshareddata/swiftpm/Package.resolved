@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Mijick/Camera/",
       "state" : {
-        "revision" : "8cde8804fa9a77c819e2db9ef9d44736ff1e3f63",
-        "version" : "3.0.0"
+        "branch" : "main",
+        "revision" : "5963b61bd82edb00165494aad728b1077d8d706a"
       }
     },
     {
