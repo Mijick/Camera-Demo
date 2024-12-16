@@ -11,6 +11,9 @@
 		6DE86D142D10972000FF1D5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE86D132D10972000FF1D5E /* AppDelegate.swift */; };
 		6DE86D172D109B7300FF1D5E /* Inter-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6DE86D162D109B7300FF1D5E /* Inter-Bold.otf */; };
 		6DE86D192D109B7A00FF1D5E /* Inter-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6DE86D182D109B7A00FF1D5E /* Inter-Regular.otf */; };
+		6DE86D1D2D109FC900FF1D5E /* Font+CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE86D1C2D109FC900FF1D5E /* Font+CustomFont.swift */; };
+		6DE86D1F2D10A07000FF1D5E /* View+CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE86D1E2D10A07000FF1D5E /* View+CustomFont.swift */; };
+		6DE86D212D10A0F800FF1D5E /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE86D202D10A0F800FF1D5E /* CustomFont.swift */; };
 		6DF2032A2BBB715E00F9372B /* Camera_DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF203292BBB715E00F9372B /* Camera_DemoApp.swift */; };
 		6DF2032C2BBB715E00F9372B /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF2032B2BBB715E00F9372B /* CameraView.swift */; };
 		6DF2032E2BBB715F00F9372B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DF2032D2BBB715F00F9372B /* Assets.xcassets */; };
@@ -21,6 +24,9 @@
 		6DE86D162D109B7300FF1D5E /* Inter-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.otf"; sourceTree = "<group>"; };
 		6DE86D182D109B7A00FF1D5E /* Inter-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.otf"; sourceTree = "<group>"; };
 		6DE86D1A2D109C2A00FF1D5E /* Camera-Demo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Camera-Demo-Info.plist"; path = "Camera Demo/Assets/Camera-Demo-Info.plist"; sourceTree = SOURCE_ROOT; };
+		6DE86D1C2D109FC900FF1D5E /* Font+CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+CustomFont.swift"; sourceTree = "<group>"; };
+		6DE86D1E2D10A07000FF1D5E /* View+CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+CustomFont.swift"; sourceTree = "<group>"; };
+		6DE86D202D10A0F800FF1D5E /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
 		6DF203262BBB715D00F9372B /* Camera Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Camera Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DF203292BBB715E00F9372B /* Camera_DemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera_DemoApp.swift; sourceTree = "<group>"; };
 		6DF2032B2BBB715E00F9372B /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
@@ -67,6 +73,15 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		6DE86D1B2D109FBE00FF1D5E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6DE86D1C2D109FC900FF1D5E /* Font+CustomFont.swift */,
+				6DE86D1E2D10A07000FF1D5E /* View+CustomFont.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		6DF2031D2BBB715D00F9372B = {
 			isa = PBXGroup;
 			children = (
@@ -90,7 +105,9 @@
 				6DF203292BBB715E00F9372B /* Camera_DemoApp.swift */,
 				6DE86D132D10972000FF1D5E /* AppDelegate.swift */,
 				6DF2032B2BBB715E00F9372B /* CameraView.swift */,
+				6DE86D1B2D109FBE00FF1D5E /* Extensions */,
 				6D1855572BE9138600521BE4 /* Assets */,
+				6DE86D202D10A0F800FF1D5E /* CustomFont.swift */,
 			);
 			path = "Camera Demo";
 			sourceTree = "<group>";
@@ -173,9 +190,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DE86D1D2D109FC900FF1D5E /* Font+CustomFont.swift in Sources */,
 				6DE86D142D10972000FF1D5E /* AppDelegate.swift in Sources */,
 				6DF2032C2BBB715E00F9372B /* CameraView.swift in Sources */,
+				6DE86D212D10A0F800FF1D5E /* CustomFont.swift in Sources */,
 				6DF2032A2BBB715E00F9372B /* Camera_DemoApp.swift in Sources */,
+				6DE86D1F2D10A07000FF1D5E /* View+CustomFont.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
