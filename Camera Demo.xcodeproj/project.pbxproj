@@ -43,9 +43,9 @@
 		6D1855572BE9138600521BE4 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				6DF2032D2BBB715F00F9372B /* Assets.xcassets */,
 				6DE86D1A2D109C2A00FF1D5E /* Camera-Demo-Info.plist */,
 				6DF2032F2BBB715F00F9372B /* Camera-Demo.entitlements */,
+				6DF2032D2BBB715F00F9372B /* Assets.xcassets */,
 				6DE86D152D1097EE00FF1D5E /* Fonts */,
 			);
 			path = Assets;
