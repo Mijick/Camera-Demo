@@ -10,11 +10,12 @@
 
 
 import SwiftUI
+import MijickPopups
 
 @main struct Camera_DemoApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 
     var body: some Scene {
-        WindowGroup(content: ContentView.init)
+        WindowGroup { ContentView().registerPopups() }
     }
 }

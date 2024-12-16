@@ -13,7 +13,7 @@ import SwiftUI
 import MijickCamera
 
 struct ContentView: View {
-    @State private var uploadedMedia: [Any] = []
+    var viewModel: ContentViewModel = .init()
 
 
     var body: some View {
@@ -60,7 +60,7 @@ private extension ContentView {
 private extension ContentView {
     func createCapturePictureButton() -> some View {
         ActionButton(icon: .scPicture, title: "Capture Picture") {
-            
+            viewModel.presentCapturePicturePopup()
         }
     }
     func createCaptureVideoButton() -> some View {
@@ -72,6 +72,7 @@ private extension ContentView {
         Text("Uploaded Media")
             .font(.h6)
             .foregroundStyle(.textPrimary)
+            .frame(maxWidth: .infinity, alignment: .leading)
     }
     func createUploadedMediaItems() -> some View {
         EmptyView()
@@ -85,4 +86,61 @@ private extension ContentView {
 }
 private extension ContentView {
 
+}
+
+
+
+
+
+
+
+import MijickPopups
+
+struct CapturePicturePopup: BottomPopup {
+    var viewModel: ContentViewModel
+
+
+    func configurePopup(config: BottomPopupConfig) -> BottomPopupConfig { config
+        .heightMode(.fullscreen)
+        .backgroundColor(.black)
+    }
+    var body: some View {
+        MCamera()
+            .setCameraOutputType(.photo)
+            .setCameraScreen {
+                DefaultCameraScreen(cameraManager: $0, namespace: $1, closeMCameraAction: $2)
+                    .cameraOutputSwitchAllowed(false)
+            }
+            .setCloseMCameraAction {
+                Task { await dismissLastPopup() }
+            }
+            .onImageCaptured {
+                viewModel.uploadedMedia.append($0)
+                $1.closeMCamera()
+            }
+            .startSession()
+    }
+}
+private extension CapturePicturePopup {
+
+}
+private extension CapturePicturePopup {
+
+}
+private extension CapturePicturePopup {
+
+}
+
+
+
+
+
+@Observable class ContentViewModel {
+    var uploadedMedia: [Any] = []
+}
+
+extension ContentViewModel {
+    @MainActor func presentCapturePicturePopup() { Task {
+        await CapturePicturePopup(viewModel: self).present()
+    }}
 }
