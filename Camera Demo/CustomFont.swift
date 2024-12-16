@@ -38,6 +38,11 @@ private extension CustomFont {
     var padding: CGFloat { spacing / 2 }
 }
 
+
+// MARK: - TYPOGRAPHY
+
+
+
 // MARK: Header
 extension CustomFont {
     static var h1: CustomFont { .init(.bold, size: 48, lineHeight: 58, kerning: -0.32) }
