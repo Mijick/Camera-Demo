@@ -1,5 +1,5 @@
 //
-//  Camera_DemoApp.swift of Camera Demo
+//  ContentView.swift of Camera Demo
 //
 //  Created by Tomasz Kurylik. Sending ❤️ from Kraków!
 //    - Mail: tomasz.kurylik@mijick.com
@@ -10,11 +10,13 @@
 
 
 import SwiftUI
+import MijickCamera
 
-@main struct Camera_DemoApp: App {
-    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+struct ContentView: View {
+    
 
-    var body: some Scene {
-        WindowGroup(content: ContentView.init)
+
+    var body: some View {
+        EmptyView()
     }
 }
