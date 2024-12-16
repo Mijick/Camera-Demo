@@ -10,6 +10,7 @@
 
 
 import SwiftUI
+import AVKit
 import MijickCamera
 
 struct ContentView: View {
@@ -146,33 +147,5 @@ private extension CapturedMedia {
         self.image = .init(uiImage: videoThumbnail)
         self.date = .init()
         self.duration = videoDuration
-    }
-}
-
-
-import AVKit
-
-extension AVURLAsset {
-    func getVideoDetails() async throws -> (duration: Duration, thumbnail: UIImage)? {
-        let duration = try await getVideoDuration()
-        let videoThumbnail = try await getVideoThumbnail()
-
-        return (duration, videoThumbnail)
-    }
-}
-private extension AVURLAsset {
-    func getVideoDuration() async throws -> Duration {
-        let duration = try await load(.duration)
-        return .init(secondsComponent: Int64(duration.seconds), attosecondsComponent: 0)
-    }
-    func getVideoThumbnail() async throws -> UIImage {
-        let assetImageGenerator = AVAssetImageGenerator(asset: self)
-        assetImageGenerator.appliesPreferredTrackTransform = true
-        assetImageGenerator.apertureMode = AVAssetImageGenerator.ApertureMode.encodedPixels
-
-        let cmTime = CMTime(seconds: 0, preferredTimescale: 60)
-        let cgImage = try await assetImageGenerator.image(at: cmTime).image
-        let thumbnailImage = UIImage(cgImage: cgImage)
-        return thumbnailImage
     }
 }
