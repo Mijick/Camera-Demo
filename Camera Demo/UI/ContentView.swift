@@ -66,7 +66,7 @@ private extension ContentView {
     }
     func createCaptureVideoButton() -> some View {
         ActionButton(icon: .scVideo, title: "Capture Video") {
-
+            viewModel.presentCaptureVideoPopup()
         }
     }
     func createUploadedMediaHeader() -> some View {
@@ -90,78 +90,5 @@ private extension ContentView {
             duration: viewModel.uploadedMedia[index].duration,
             onDeleteButtonTap: { viewModel.deleteMedia(at: index) }
         )
-    }
-}
-private extension ContentView {
-    
-}
-private extension ContentView {
-
-}
-
-
-
-
-
-
-
-
-
-
-
-@MainActor @Observable class ContentViewModel {
-    private(set) var uploadedMedia: [CapturedMedia] = []
-}
-
-// MARK: Interaction with data
-extension ContentViewModel {
-    func addMedia(_ media: Any) async {
-        guard let capturedMedia = await CapturedMedia(media) else { return }
-        uploadedMedia.append(capturedMedia)
-    }
-    func deleteMedia(at index: Int) {
-        guard index < uploadedMedia.count else { return }
-        uploadedMedia.remove(at: index)
-    }
-}
-
-// MARK: Present Popup
-extension ContentViewModel {
-    func presentCapturePicturePopup() { Task {
-        await CapturePicturePopup(viewModel: self).present()
-    }}
-    func presentCaptureVideoPopup() { Task {
-        //await CaptureVideoPopup(viewModel: self).present()
-    }}
-}
-
-
-
-
-
-@MainActor struct CapturedMedia {
-    let image: Image
-    let date: Date
-    let duration: Duration?
-
-
-    init?(_ data: Any) async {
-        if let image = data as? UIImage { self.init(image: image) }
-        else if let videoURL = data as? URL { await self.init(videoURL: videoURL) }
-        else { return nil }
-    }
-}
-private extension CapturedMedia {
-    init(image: UIImage) {
-        self.image = .init(uiImage: image)
-        self.date = .init()
-        self.duration = nil
-    }
-    init?(videoURL: URL) async {
-        guard let (videoDuration, videoThumbnail) = try? await AVURLAsset(url: videoURL).getVideoDetails() else { return nil }
-
-        self.image = .init(uiImage: videoThumbnail)
-        self.date = .init()
-        self.duration = videoDuration
     }
 }
