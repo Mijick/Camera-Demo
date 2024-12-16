@@ -104,45 +104,6 @@ private extension ContentView {
 
 
 
-import MijickPopups
-
-struct CapturePicturePopup: BottomPopup {
-    var viewModel: ContentViewModel
-
-
-    func configurePopup(config: BottomPopupConfig) -> BottomPopupConfig { config
-        .heightMode(.fullscreen)
-        .backgroundColor(.black)
-    }
-    var body: some View {
-        MCamera()
-            .setCameraOutputType(.photo)
-            .setCameraScreen {
-                DefaultCameraScreen(cameraManager: $0, namespace: $1, closeMCameraAction: $2)
-                    .cameraOutputSwitchAllowed(false)
-            }
-            .setCloseMCameraAction {
-                Task { await dismissLastPopup() }
-            }
-            .onImageCaptured { image, controller in Task {
-                if let capturedMedia = await CapturedMedia(image) {
-                    viewModel.uploadedMedia.append(capturedMedia)
-                }
-                controller.closeMCamera()
-            }}
-            .startSession()
-    }
-}
-private extension CapturePicturePopup {
-
-}
-private extension CapturePicturePopup {
-
-}
-private extension CapturePicturePopup {
-
-}
-
 
 
 
