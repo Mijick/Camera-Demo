@@ -75,7 +75,9 @@ private extension ContentView {
             .frame(maxWidth: .infinity, alignment: .leading)
     }
     func createUploadedMediaItems() -> some View {
-        EmptyView()
+        VStack(spacing: 20) {
+
+        }
     }
 }
 private extension ContentView {
