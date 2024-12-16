@@ -113,13 +113,9 @@ private extension ContentView {
     private(set) var uploadedMedia: [CapturedMedia] = []
 }
 
+// MARK: Interaction with data
 extension ContentViewModel {
-    func presentCapturePicturePopup() { Task {
-        await CapturePicturePopup(viewModel: self).present()
-    }}
-
-
-     func addMedia(_ media: Any) async {
+    func addMedia(_ media: Any) async {
         guard let capturedMedia = await CapturedMedia(media) else { return }
         uploadedMedia.append(capturedMedia)
     }
@@ -127,6 +123,16 @@ extension ContentViewModel {
         guard index < uploadedMedia.count else { return }
         uploadedMedia.remove(at: index)
     }
+}
+
+// MARK: Present Popup
+extension ContentViewModel {
+    func presentCapturePicturePopup() { Task {
+        await CapturePicturePopup(viewModel: self).present()
+    }}
+    func presentCaptureVideoPopup() { Task {
+        //await CaptureVideoPopup(viewModel: self).present()
+    }}
 }
 
 
