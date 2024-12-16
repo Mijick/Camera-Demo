@@ -79,6 +79,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6DA195592D10F09500EAE324 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				6DF203292BBB715E00F9372B /* Camera_DemoApp.swift */,
+				6DE86D242D10A47800FF1D5E /* ContentView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		6DE86D152D1097EE00FF1D5E /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,8 +162,7 @@
 		6DF203282BBB715E00F9372B /* Camera Demo */ = {
 			isa = PBXGroup;
 			children = (
-				6DF203292BBB715E00F9372B /* Camera_DemoApp.swift */,
-				6DE86D242D10A47800FF1D5E /* ContentView.swift */,
+				6DA195592D10F09500EAE324 /* UI */,
 				6DE86D132D10972000FF1D5E /* AppDelegate.swift */,
 				6DE86D292D10A98400FF1D5E /* Components */,
 				6DE86D1B2D109FBE00FF1D5E /* Extensions */,
