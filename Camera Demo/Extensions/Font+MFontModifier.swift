@@ -1,5 +1,5 @@
 //
-//  Font+CustomFont.swift of Camera Demo
+//  Font+MFontModifier.swift of Camera Demo
 //
 //  Created by Tomasz Kurylik. Sending ❤️ from Kraków!
 //    - Mail: tomasz.kurylik@mijick.com

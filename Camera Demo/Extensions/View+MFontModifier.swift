@@ -1,5 +1,5 @@
 //
-//  View+CustomFont.swift of Camera Demo
+//  View+MFontModifier.swift of Camera Demo
 //
 //  Created by Tomasz Kurylik. Sending ❤️ from Kraków!
 //    - Mail: tomasz.kurylik@mijick.com
@@ -11,4 +11,6 @@
 
 import SwiftUI
 
-
+extension View {
+    func font(_ fontModifier: MFontModifier) -> some View { modifier(fontModifier) }
+}
