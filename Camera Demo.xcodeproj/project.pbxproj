@@ -327,7 +327,7 @@
 		6DF203362BBB715F00F9372B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "app-icon";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
 				CODE_SIGN_ENTITLEMENTS = "Camera Demo/Assets/Camera-Demo.entitlements";
 				CODE_SIGN_STYLE = Automatic;
@@ -370,7 +370,7 @@
 		6DF203372BBB715F00F9372B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "app-icon";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
 				CODE_SIGN_ENTITLEMENTS = "Camera Demo/Assets/Camera-Demo.entitlements";
 				CODE_SIGN_STYLE = Automatic;
