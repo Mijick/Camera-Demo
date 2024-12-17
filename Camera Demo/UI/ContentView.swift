@@ -29,12 +29,9 @@ struct ContentView: View {
     }
 }
 private extension ContentView {
-    func createNavigationBar() -> some View {
-        NavigationBar()
-    }
     func createScrollableView() -> some View {
         ScrollView {
-            VStack(spacing: 48) {
+            VStack(spacing: 36) {
                 createCaptureMediaPopup()
                 createUploadedMediaView()
             }
@@ -42,6 +39,9 @@ private extension ContentView {
             .padding(.bottom, 72)
         }
         .scrollIndicators(.hidden)
+    }
+    func createNavigationBar() -> some View {
+        NavigationBar()
     }
 }
 private extension ContentView {
@@ -61,7 +61,7 @@ private extension ContentView {
     func createUploadedMediaHeader() -> some View {
         VStack(alignment: .leading, spacing: 12) {
             createUploadedMediaHeaderTitle()
-            if viewModel.uploadedMedia.isEmpty { createUploadedMediaHeaderDescription() }
+            createUploadedMediaHeaderDescription()
         }
     }
     func createUploadedMediaItems() -> some View {
@@ -77,13 +77,13 @@ private extension ContentView {
             .foregroundStyle(.textPrimary)
             .frame(maxWidth: .infinity, alignment: .leading)
     }
-    func createUploadedMediaHeaderDescription() -> some View {
+    @ViewBuilder func createUploadedMediaHeaderDescription() -> some View { if viewModel.uploadedMedia.isEmpty {
         Text("Psst! This is an interactive demo. Tap on the buttons above to see the magic happen.")
             .font(.mediumRegular)
             .foregroundStyle(.textSecondary)
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.trailing, 36)
-    }
+    }}
     func createMediaItem(_ item: CapturedMedia) -> some View {
         UploadedMediaItem(
             image: item.image,
