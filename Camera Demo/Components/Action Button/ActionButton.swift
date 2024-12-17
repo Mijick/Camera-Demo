@@ -23,7 +23,7 @@ struct ActionButton: View {
 private extension ActionButton {
     func createButtonLabel() -> some View {
         createMCamera()
-            .frame(height: 240)
+            .frame(height: 280)
             .frame(maxWidth: .infinity)
             .overlay(createMCameraOverlay())
             .background(createMCameraBackground())
@@ -33,7 +33,7 @@ private extension ActionButton {
 private extension ActionButton {
     func createMCamera() -> some View {
         MCamera()
-            .setCameraScreen(Camera.init)
+            .setCameraScreen(CameraScreen.init)
             .setGridVisibility(false)
             .setCameraFilters([.init(name: "CIPhotoEffectInstant")!])
             .startSession()
@@ -50,17 +50,3 @@ private extension ActionButton {
             .stroke(.borderTertiary)
     }
 }
-
-
-
-extension ActionButton { struct Camera: MCameraScreen {
-    let cameraManager: CameraManager
-    let namespace: Namespace.ID
-    let closeMCameraAction: () -> ()
-
-
-    var body: some View {
-        createCameraOutputView().disabled(true)
-    }
-}}
-
