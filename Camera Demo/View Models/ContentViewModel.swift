@@ -15,7 +15,7 @@ import Foundation
     private(set) var uploadedMedia: [CapturedMedia] = []
 }
 
-// MARK: Interaction with data
+// MARK: Interaction With Data
 extension ContentViewModel {
     func addMedia(_ media: Any) async {
         guard let capturedMedia = await CapturedMedia(media) else { return }
