@@ -34,23 +34,21 @@ private extension ContentView {
     }
     func createScrollableView() -> some View {
         ScrollView {
-            VStack(spacing: 72) {
-                createControlButtons()
+            VStack(spacing: 48) {
+                createCaptureMediaPopup()
                 createUploadedMediaView()
             }
-            .padding(.top, 20)
-            .padding(.bottom, 44)
+            .padding(.top, 12)
+            .padding(.bottom, 72)
         }
         .scrollIndicators(.hidden)
     }
 }
 private extension ContentView {
-    func createControlButtons() -> some View {
-        HStack(spacing: 12) {
-            createCapturePictureButton()
-            createCaptureVideoButton()
+    func createCaptureMediaPopup() -> some View {
+        ActionButton {
+            viewModel.presentCaptureMediaPopup()
         }
-        .frame(maxWidth: .infinity)
     }
     func createUploadedMediaView() -> some View {
         VStack(alignment: .leading, spacing: 20) {
@@ -60,18 +58,8 @@ private extension ContentView {
     }
 }
 private extension ContentView {
-    func createCapturePictureButton() -> some View {
-        ActionButton(icon: .scPicture, title: "Capture Picture") {
-            viewModel.presentCapturePicturePopup()
-        }
-    }
-    func createCaptureVideoButton() -> some View {
-        ActionButton(icon: .scVideo, title: "Capture Video") {
-            viewModel.presentCaptureVideoPopup()
-        }
-    }
     func createUploadedMediaHeader() -> some View {
-        VStack(alignment: .leading, spacing: 16) {
+        VStack(alignment: .leading, spacing: 12) {
             createUploadedMediaHeaderTitle()
             if viewModel.uploadedMedia.isEmpty { createUploadedMediaHeaderDescription() }
         }
@@ -85,7 +73,7 @@ private extension ContentView {
 private extension ContentView {
     func createUploadedMediaHeaderTitle() -> some View {
         Text("Uploaded Media")
-            .font(.h5)
+            .font(.h6)
             .foregroundStyle(.textPrimary)
             .frame(maxWidth: .infinity, alignment: .leading)
     }

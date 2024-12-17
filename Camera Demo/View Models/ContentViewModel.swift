@@ -29,7 +29,7 @@ extension ContentViewModel {
 
 // MARK: Present Popup
 extension ContentViewModel {
-    func presentCapturePicturePopup() { Task {
+    func presentCaptureMediaPopup() { Task {
         await CapturePicturePopup(viewModel: self).present()
     }}
     func presentCaptureVideoPopup() { Task {
