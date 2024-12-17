@@ -10,10 +10,9 @@
 
 
 import SwiftUI
+import MijickCamera
 
 struct ActionButton: View {
-    let icon: ImageResource
-    let title: String
     let action: () -> ()
 
 
@@ -23,35 +22,45 @@ struct ActionButton: View {
 }
 private extension ActionButton {
     func createButtonLabel() -> some View {
-        VStack(spacing: 8) {
-            createTopView()
-            createTitle()
-        }
+        createMCamera()
+            .frame(height: 240)
+            .frame(maxWidth: .infinity)
+            .overlay(createMCameraOverlay())
+            .background(createMCameraBackground())
+            .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
     }
 }
 private extension ActionButton {
-    func createTopView() -> some View {
-        Image(icon)
+    func createMCamera() -> some View {
+        MCamera()
+            .setCameraScreen(Camera.init)
+            .setGridVisibility(false)
+            .setCameraFilters([.init(name: "CIPhotoEffectInstant")!])
+            .startSession()
+    }
+    func createMCameraOverlay() -> some View {
+        Image(.scCamera)
             .resizable()
-            .frame(width: 40, height: 40)
+            .frame(width: 48, height: 48)
             .foregroundStyle(.textPrimary)
-            .frame(height: 132)
-            .frame(maxWidth: .infinity)
-            .background(
-                RoundedRectangle(cornerRadius: 16, style: .continuous)
-                    .fill(.backgroundSecondary50)
-                    .stroke(.borderTertiary)
-            )
     }
-    func createTitle() -> some View {
-        Text(title)
-            .font(.mediumBold)
-            .foregroundStyle(.textPrimary)
+    func createMCameraBackground() -> some View {
+        RoundedRectangle(cornerRadius: 16, style: .continuous)
+            .fill(.backgroundSecondary50)
+            .stroke(.borderTertiary)
     }
 }
 
 
-// MARK: Preview
-#Preview(traits: .sizeThatFitsLayout) {
-    ActionButton(icon: .scPicture, title: "Capture Picture", action: {})
-}
+
+extension ActionButton { struct Camera: MCameraScreen {
+    let cameraManager: CameraManager
+    let namespace: Namespace.ID
+    let closeMCameraAction: () -> ()
+
+
+    var body: some View {
+        createCameraOutputView().disabled(true)
+    }
+}}
+
