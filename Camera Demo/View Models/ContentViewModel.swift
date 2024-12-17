@@ -33,6 +33,6 @@ extension ContentViewModel {
         await CapturePicturePopup(viewModel: self).present()
     }}
     func presentCaptureVideoPopup() { Task {
-        //await CaptureVideoPopup(viewModel: self).present()
+        await CaptureVideoPopup(viewModel: self).present()
     }}
 }

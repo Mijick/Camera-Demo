@@ -13,6 +13,7 @@
 		6DA195602D10F32F00EAE324 /* Task++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA1955F2D10F32F00EAE324 /* Task++.swift */; };
 		6DA195642D10F5AE00EAE324 /* CapturedMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA195632D10F5AE00EAE324 /* CapturedMedia.swift */; };
 		6DA195662D10F5E300EAE324 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA195652D10F5E300EAE324 /* ContentViewModel.swift */; };
+		6DA195682D10F7A300EAE324 /* CaptureVideoPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA195672D10F7A300EAE324 /* CaptureVideoPopup.swift */; };
 		6DE86D142D10972000FF1D5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE86D132D10972000FF1D5E /* AppDelegate.swift */; };
 		6DE86D172D109B7300FF1D5E /* Inter-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6DE86D162D109B7300FF1D5E /* Inter-Bold.otf */; };
 		6DE86D192D109B7A00FF1D5E /* Inter-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6DE86D182D109B7A00FF1D5E /* Inter-Regular.otf */; };
@@ -37,6 +38,7 @@
 		6DA1955F2D10F32F00EAE324 /* Task++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task++.swift"; sourceTree = "<group>"; };
 		6DA195632D10F5AE00EAE324 /* CapturedMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapturedMedia.swift; sourceTree = "<group>"; };
 		6DA195652D10F5E300EAE324 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		6DA195672D10F7A300EAE324 /* CaptureVideoPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureVideoPopup.swift; sourceTree = "<group>"; };
 		6DE86D132D10972000FF1D5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6DE86D162D109B7300FF1D5E /* Inter-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.otf"; sourceTree = "<group>"; };
 		6DE86D182D109B7A00FF1D5E /* Inter-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.otf"; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				6DA1955B2D10F12700EAE324 /* CapturePicturePopup.swift */,
+				6DA195672D10F7A300EAE324 /* CaptureVideoPopup.swift */,
 			);
 			path = Popups;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				6DF2032A2BBB715E00F9372B /* Camera_DemoApp.swift in Sources */,
 				6DA195642D10F5AE00EAE324 /* CapturedMedia.swift in Sources */,
 				6DE86D1F2D10A07000FF1D5E /* View+MFontModifier.swift in Sources */,
+				6DA195682D10F7A300EAE324 /* CaptureVideoPopup.swift in Sources */,
 				6DE86D332D10AB0E00FF1D5E /* ActionButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
