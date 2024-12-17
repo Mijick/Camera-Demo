@@ -21,6 +21,7 @@ struct CaptureVideoPopup: BottomPopup {
     func configurePopup(config: BottomPopupConfig) -> BottomPopupConfig { config
         .heightMode(.fullscreen)
         .backgroundColor(.black)
+        .enableDragGesture(false)
     }
     var body: some View {
         ZStack { if shouldShowCamera {
