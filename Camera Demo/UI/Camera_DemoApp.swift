@@ -11,6 +11,7 @@
 
 import SwiftUI
 import MijickPopups
+import MijickCamera
 
 @main struct Camera_DemoApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
@@ -19,4 +20,12 @@ import MijickPopups
     var body: some Scene {
         WindowGroup { ContentView().registerPopups() }
     }
+}
+
+
+// MARK: App Delegate
+class AppDelegate: NSObject, MApplicationDelegate {
+    static var orientationLock = UIInterfaceOrientationMask.all
+
+    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask { AppDelegate.orientationLock }
 }

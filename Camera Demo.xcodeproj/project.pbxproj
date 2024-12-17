@@ -14,7 +14,6 @@
 		6DA195642D10F5AE00EAE324 /* CapturedMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA195632D10F5AE00EAE324 /* CapturedMedia.swift */; };
 		6DA195662D10F5E300EAE324 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA195652D10F5E300EAE324 /* ContentViewModel.swift */; };
 		6DAA66322D11C08900C2D44D /* ActionButton+CameraScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DAA66312D11C08900C2D44D /* ActionButton+CameraScreen.swift */; };
-		6DE86D142D10972000FF1D5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE86D132D10972000FF1D5E /* AppDelegate.swift */; };
 		6DE86D172D109B7300FF1D5E /* Inter-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6DE86D162D109B7300FF1D5E /* Inter-Bold.otf */; };
 		6DE86D192D109B7A00FF1D5E /* Inter-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6DE86D182D109B7A00FF1D5E /* Inter-Regular.otf */; };
 		6DE86D1D2D109FC900FF1D5E /* Font+MFontModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE86D1C2D109FC900FF1D5E /* Font+MFontModifier.swift */; };
@@ -39,7 +38,6 @@
 		6DA195632D10F5AE00EAE324 /* CapturedMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapturedMedia.swift; sourceTree = "<group>"; };
 		6DA195652D10F5E300EAE324 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		6DAA66312D11C08900C2D44D /* ActionButton+CameraScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActionButton+CameraScreen.swift"; sourceTree = "<group>"; };
-		6DE86D132D10972000FF1D5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6DE86D162D109B7300FF1D5E /* Inter-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.otf"; sourceTree = "<group>"; };
 		6DE86D182D109B7A00FF1D5E /* Inter-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.otf"; sourceTree = "<group>"; };
 		6DE86D1A2D109C2A00FF1D5E /* Camera-Demo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Camera-Demo-Info.plist"; path = "Camera Demo/Assets/Camera-Demo-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -105,7 +103,6 @@
 			isa = PBXGroup;
 			children = (
 				6DA1955B2D10F12700EAE324 /* CapturePicturePopup.swift */,
-				6DE86D132D10972000FF1D5E /* AppDelegate.swift */,
 			);
 			path = Popups;
 			sourceTree = "<group>";
@@ -124,6 +121,14 @@
 				6DA195632D10F5AE00EAE324 /* CapturedMedia.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		6DAA66352D11C5E300C2D44D /* Miscellaneous */ = {
+			isa = PBXGroup;
+			children = (
+				6DE86D202D10A0F800FF1D5E /* MFontModifier.swift */,
+			);
+			path = Miscellaneous;
 			sourceTree = "<group>";
 		};
 		6DE86D152D1097EE00FF1D5E /* Fonts */ = {
@@ -207,9 +212,9 @@
 				6DA195612D10F36A00EAE324 /* View Models */,
 				6DA195622D10F37300EAE324 /* Models */,
 				6DE86D292D10A98400FF1D5E /* Components */,
+				6DAA66352D11C5E300C2D44D /* Miscellaneous */,
 				6DE86D1B2D109FBE00FF1D5E /* Extensions */,
 				6D1855572BE9138600521BE4 /* Assets */,
-				6DE86D202D10A0F800FF1D5E /* MFontModifier.swift */,
 			);
 			path = "Camera Demo";
 			sourceTree = "<group>";
@@ -298,7 +303,6 @@
 				6DA1955C2D10F12700EAE324 /* CapturePicturePopup.swift in Sources */,
 				6DE86D2E2D10A9D800FF1D5E /* NavigationBar+LogoButton.swift in Sources */,
 				6DE86D1D2D109FC900FF1D5E /* Font+MFontModifier.swift in Sources */,
-				6DE86D142D10972000FF1D5E /* AppDelegate.swift in Sources */,
 				6DE86D302D10A9E400FF1D5E /* NavigationBar+SocialMediaButton.swift in Sources */,
 				6DE86D252D10A47800FF1D5E /* ContentView.swift in Sources */,
 				6DA195602D10F32F00EAE324 /* Task++.swift in Sources */,
