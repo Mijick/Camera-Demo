@@ -1,0 +1,33 @@
+{
+  "originHash" : "49a50abb2bc4f6f1b7fc8fb1644e6d9c3e4523b0f7da81c1c4bc9af7fca74aa5",
+  "pins" : [
+    {
+      "identity" : "camera",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Mijick/Camera/",
+      "state" : {
+        "branch" : "main",
+        "revision" : "5963b61bd82edb00165494aad728b1077d8d706a"
+      }
+    },
+    {
+      "identity" : "popups",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Mijick/Popups.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "7b0a34eb8c26de6883bda8d09f2ddcc5a9a4b800"
+      }
+    },
+    {
+      "identity" : "timer",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Mijick/Timer",
+      "state" : {
+        "revision" : "342371c33c3f084d82a4818447ba77d858064c85",
+        "version" : "2.0.0"
+      }
+    }
+  ],
+  "version" : 3
+}
