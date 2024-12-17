@@ -20,7 +20,8 @@ struct NavigationBar: View {
             createDiscordButton()
             createGithubButton()
         }
-        .padding(.vertical, 8)
+        .padding(.top, 8)
+        .padding(.bottom, 4)
     }
 }
 private extension NavigationBar {

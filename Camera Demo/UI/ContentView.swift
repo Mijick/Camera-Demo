@@ -22,7 +22,7 @@ struct ContentView: View {
             createScrollableView()
             createNavigationBar()
         }
-        .padding(.horizontal, 16)
+        .padding(.horizontal, 20)
         .background(Color(.backgroundPrimary).ignoresSafeArea())
         .animation(.smooth, value: viewModel.uploadedMedia.count)
         .preferredColorScheme(.dark)

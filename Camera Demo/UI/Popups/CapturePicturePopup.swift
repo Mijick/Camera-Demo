@@ -26,6 +26,7 @@ struct CapturePicturePopup: BottomPopup {
     var body: some View {
         ZStack { if shouldShowCamera {
             MCamera()
+                .lockCameraInPortraitOrientation(AppDelegate.self)
                 .setCameraOutputType(.photo)
                 .setCloseMCameraAction(closeMCameraAction)
                 .onImageCaptured(onImageCaptured)

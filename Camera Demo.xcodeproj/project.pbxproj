@@ -105,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				6DA1955B2D10F12700EAE324 /* CapturePicturePopup.swift */,
+				6DE86D132D10972000FF1D5E /* AppDelegate.swift */,
 			);
 			path = Popups;
 			sourceTree = "<group>";
@@ -209,7 +210,6 @@
 				6DE86D1B2D109FBE00FF1D5E /* Extensions */,
 				6D1855572BE9138600521BE4 /* Assets */,
 				6DE86D202D10A0F800FF1D5E /* MFontModifier.swift */,
-				6DE86D132D10972000FF1D5E /* AppDelegate.swift */,
 			);
 			path = "Camera Demo";
 			sourceTree = "<group>";
