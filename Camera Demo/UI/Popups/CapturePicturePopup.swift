@@ -27,19 +27,13 @@ struct CapturePicturePopup: BottomPopup {
         ZStack { if shouldShowCamera {
             MCamera()
                 .setCameraOutputType(.photo)
-                .setCameraScreen(createCameraScreen)
                 .setCloseMCameraAction(closeMCameraAction)
                 .onImageCaptured(onImageCaptured)
+                .onVideoCaptured(onVideoCaptured)
                 .startSession()
         }}
         .frame(maxHeight: .infinity)
         .onAppear(perform: onAppear)
-    }
-}
-private extension CapturePicturePopup {
-    func createCameraScreen(cameraManager: CameraManager, namespace: Namespace.ID, closeMCameraAction: @escaping () -> ()) -> DefaultCameraScreen {
-        DefaultCameraScreen(cameraManager: cameraManager, namespace: namespace, closeMCameraAction: closeMCameraAction)
-            .cameraOutputSwitchAllowed(false)
     }
 }
 
@@ -53,6 +47,10 @@ private extension CapturePicturePopup {
     }}
     func onImageCaptured(_ image: UIImage, _ controller: MCamera.Controller) { Task {
         await viewModel.addMedia(image)
+        controller.closeMCamera()
+    }}
+    func onVideoCaptured(_ videoURL: URL, _ controller: MCamera.Controller) { Task {
+        await viewModel.addMedia(videoURL)
         controller.closeMCamera()
     }}
 }
