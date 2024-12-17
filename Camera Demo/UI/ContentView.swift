@@ -34,7 +34,7 @@ private extension ContentView {
     }
     func createScrollableView() -> some View {
         ScrollView {
-            VStack(spacing: 64) {
+            VStack(spacing: 72) {
                 createControlButtons()
                 createUploadedMediaView()
             }
@@ -71,10 +71,10 @@ private extension ContentView {
         }
     }
     func createUploadedMediaHeader() -> some View {
-        Text("Uploaded Media")
-            .font(.h5)
-            .foregroundStyle(.textPrimary)
-            .frame(maxWidth: .infinity, alignment: .leading)
+        VStack(alignment: .leading, spacing: 16) {
+            createUploadedMediaHeaderTitle()
+            if viewModel.uploadedMedia.isEmpty { createUploadedMediaHeaderDescription() }
+        }
     }
     func createUploadedMediaItems() -> some View {
         VStack(spacing: 20) {
@@ -83,6 +83,19 @@ private extension ContentView {
     }
 }
 private extension ContentView {
+    func createUploadedMediaHeaderTitle() -> some View {
+        Text("Uploaded Media")
+            .font(.h5)
+            .foregroundStyle(.textPrimary)
+            .frame(maxWidth: .infinity, alignment: .leading)
+    }
+    func createUploadedMediaHeaderDescription() -> some View {
+        Text("Psst! This is an interactive demo. Tap on the buttons above to see the magic happen.")
+            .font(.mediumRegular)
+            .foregroundStyle(.textSecondary)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(.trailing, 36)
+    }
     func createMediaItem(_ item: CapturedMedia) -> some View {
         UploadedMediaItem(
             image: item.image,
