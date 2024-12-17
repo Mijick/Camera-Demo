@@ -32,6 +32,7 @@ private extension UploadedMediaItem {
     func createImage() -> some View {
         image
             .resizable()
+            .aspectRatio(contentMode: .fill)
             .frame(width: 72, height: 72)
             .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
     }
