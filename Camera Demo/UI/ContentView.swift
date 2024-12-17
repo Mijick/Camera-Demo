@@ -24,6 +24,7 @@ struct ContentView: View {
         }
         .padding(.horizontal, 16)
         .background(Color(.backgroundPrimary).ignoresSafeArea())
+        .animation(.smooth, value: viewModel.uploadedMedia.count)
         .preferredColorScheme(.dark)
     }
 }
@@ -77,18 +78,18 @@ private extension ContentView {
     }
     func createUploadedMediaItems() -> some View {
         VStack(spacing: 20) {
-            ForEach(0..<viewModel.uploadedMedia.count, id: \.self, content: createMediaItem)
+            ForEach(viewModel.uploadedMedia, id: \.date, content: createMediaItem)
         }
     }
 }
 private extension ContentView {
-    func createMediaItem(_ index: Int) -> some View {
+    func createMediaItem(_ item: CapturedMedia) -> some View {
         UploadedMediaItem(
-            image: viewModel.uploadedMedia[index].image,
-            title: "Item \(index + 1)",
-            date: viewModel.uploadedMedia[index].date,
-            duration: viewModel.uploadedMedia[index].duration,
-            onDeleteButtonTap: { viewModel.deleteMedia(at: index) }
+            image: item.image,
+            title: item.title,
+            date: item.date,
+            duration: item.duration,
+            onDeleteButtonTap: { viewModel.deleteMedia(item) }
         )
     }
 }

@@ -21,8 +21,8 @@ extension ContentViewModel {
         guard let capturedMedia = await CapturedMedia(media) else { return }
         uploadedMedia.append(capturedMedia)
     }
-    func deleteMedia(at index: Int) {
-        guard index < uploadedMedia.count else { return }
+    func deleteMedia(_ media: CapturedMedia) {
+        guard let index = uploadedMedia.firstIndex(of: media) else { return }
         uploadedMedia.remove(at: index)
     }
 }
