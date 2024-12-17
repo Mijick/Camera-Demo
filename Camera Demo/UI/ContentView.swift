@@ -19,8 +19,8 @@ struct ContentView: View {
 
     var body: some View {
         VStack(spacing: 0) {
-            createNavigationBar()
             createScrollableView()
+            createNavigationBar()
         }
         .padding(.horizontal, 16)
         .background(Color(.backgroundPrimary).ignoresSafeArea())
@@ -38,7 +38,7 @@ private extension ContentView {
                 createControlButtons()
                 createUploadedMediaView()
             }
-            .padding(.top, 32)
+            .padding(.top, 20)
             .padding(.bottom, 44)
         }
         .scrollIndicators(.hidden)
@@ -49,8 +49,8 @@ private extension ContentView {
         HStack(spacing: 12) {
             createCapturePictureButton()
             createCaptureVideoButton()
-            Spacer()
         }
+        .frame(maxWidth: .infinity)
     }
     func createUploadedMediaView() -> some View {
         VStack(alignment: .leading, spacing: 20) {
@@ -72,7 +72,7 @@ private extension ContentView {
     }
     func createUploadedMediaHeader() -> some View {
         Text("Uploaded Media")
-            .font(.h6)
+            .font(.h5)
             .foregroundStyle(.textPrimary)
             .frame(maxWidth: .infinity, alignment: .leading)
     }

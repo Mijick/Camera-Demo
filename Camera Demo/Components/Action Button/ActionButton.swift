@@ -33,12 +33,15 @@ private extension ActionButton {
     func createTopView() -> some View {
         Image(icon)
             .resizable()
-            .frame(width: 52, height: 52)
+            .frame(width: 40, height: 40)
             .foregroundStyle(.textPrimary)
             .frame(height: 132)
             .frame(maxWidth: .infinity)
-            .background(.backgroundSecondary)
-            .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+            .background(
+                RoundedRectangle(cornerRadius: 16, style: .continuous)
+                    .fill(.backgroundSecondary50)
+                    .stroke(.borderTertiary)
+            )
     }
     func createTitle() -> some View {
         Text(title)
